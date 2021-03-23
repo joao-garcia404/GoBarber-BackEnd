@@ -1,69 +1,42 @@
-# Recuperação de senha
+<h1 align="center">
+  <img alt="Logo" src="https://i.imgur.com/VFf4OgR.png" width="200px">
+</h1>
 
-**RF** -- Requisitos funcionais
+<h3 align="center">
+  Aplicação express para o projeto GoBarber
+</h3>
 
-- O usuário deve poder recuperar sua senha informando o seu e-mail;
-- O usuário deve receber um e-mail com instruções para recuperação de senha;
-- O usuário deve poder resetar sua senha;
+--- 
 
-**RNF** -- Requisitos não funcionais
+## 💇🏻‍♂️ About the project
 
-- Utilizar Mailtrap para testar envios de e-mail em desenvolvimento;
-- Utilizar amazon SES para envios de e-mail em produção;
-- O envio de e-mail deve acontecer em segundo plano (Background job);
+Uma API que provê todos os recursos para a realização de agendamentos entre barbeiros e clientes.
 
-**RN** -- Regra de negócio
+Para ver a versão web, <a href="https://github.com/joao-garcia404/GoBarber-web">GoBarber web</a>
+<br>
+Para ver a versão mobile, <a href="https://github.com/joao-garcia404/GoBarber-Mobile">GoBarber mobile</a>
 
-- O link enviaado pro e-mail para resetar a senha, deve expirar em 2h;
-- O usuário precisa confirmar uma nova senha ao resetar sua senha;
+## Tecnologias utilizadas
 
-# Atualização do perfil
+- [NodeJS](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/pt-br/)
+- [Multer](https://github.com/expressjs/multer)
+- [TypeORM](https://typeorm.io/#/)
+- [JWT-Token](https://jwt.io/)
+- [uuid-v4](https://www.uuidgenerator.net/version4)
+- [PostGreSQL](https://www.postgresql.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Redis](https://redis.io/)
+- [Jest](https://jestjs.io/pt-BR/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [EditorConfig](https://editorconfig.org/)
 
-**RF**
+## 📝 License
 
-- O  usuário deve poder atualizar seu nome, email e senha;
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-**RN**
+---
 
-- O usuário não pode alterar seu email para um email já utilizado;
-- Para atualizar sua senha, o usuário deve informar a senha antiga;
-- Para atualizar sua senha, o usuário precisa confirmar a nova senha;
-
-# Painel do prestador
-
-**RF**
-
-- O usuário deve poder listar seus agendamentos de um dia específico;
-- O prestador deve receber uma notificação sempre que houver um novo agendamento;
-- O prestador deve poder vizualizar as notificações não lidas;
-
-**RNF**
-
-- Os agendamentos do prestador no dia devem ser armazenados em cache;
-- As notificações do prestador devem ser armazenadas no mongoDB;
-- As notificações do prestador devem ser enviadas em tempo real utilizando Socket.io;
-
-**RN**
-
-- A notificação deve ter um status de lida ou nãop-lida para que o prestador possa controlar;
-
-# Agendamento de serviços
-
-**RF**
-
-- O usuário deve poder listar todos os prestadores de serviços cadastrados;
-- O usuário deve poder listar todos os dias de um mês com pelo menos um horário disponível de um prestador;
-- O usuário deve poder listar horários disṕoniveis em um dia específico de um pretador;
-- O usuário deve poder realizar um novo agendamento com um prestador;
-
-**RNF**
-
-- A listagem de prestadores deve ser armazenada em cache;
-
-**NF**
-
-- Cada agendamento deve durar 1 hora exatamente;
-- Os agendamentos devem estar disponíveis entre 8h às 18h (Primeiro às 8h, e último as 17h);
-- O usuário não pode agendar em um horário já ocupado;
-- O usuário não pode agendar em um horário que já passou;
-- O usuário não podem agendar serviços consigo mesmo;
+Made with 💜 by João Garcia 👋 [Veja meu Linkedin](https://www.linkedin.com/in/joão-vitor-garcia-89bba81b1/)
